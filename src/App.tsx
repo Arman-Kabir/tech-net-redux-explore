@@ -1,9 +1,23 @@
+import { useSelector } from "react-redux"
+import { RootState } from "./redux/store"
 
 function App() {
+
+  const {count} = useSelector((state:RootState) => state.counter)
+
+
   return (
-
-    <h1 className="bg-red-500">Tech net</h1>
-
+    <div>
+      <div className="">
+        <button className="">
+          Increment
+        </button>
+        <div>{count}</div>
+        <button className="">
+          Decrement
+        </button>
+      </div>
+    </div>
   )
 }
 
